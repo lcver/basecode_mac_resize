@@ -27,14 +27,25 @@ class WebviewController: NSViewController, NSWindowDelegate {
         
         if let screenWindow = self.view.window?.frame {
             let rect = screenWindow.size
-            let frameRect = NSRect(x: 0, y: 0, width: rect.width, height: rect.height)
+            let frameRect = NSRect(x: 0, y: -10, width: rect.width, height: rect.height)
             frameViewWK(frameRect: frameRect)
             setViewURL(file: AppTemp)
         }
     }
     
+    
+    
     func windowWillResize(_ sender: NSWindow, to frameSize: NSSize) -> NSSize {
+        
+        if let frameScreen = NSScreen.main?.frame,
+           frameScreen.size == frameSize {
+            WebView.setFrameOrigin(NSPoint(x: 0, y: 0))
+        } else {
+            WebView.setFrameOrigin(NSPoint(x: 0, y: -10))
+        }
+        
         WebView.frame.size = frameSize
+        
         return frameSize
     }
     
