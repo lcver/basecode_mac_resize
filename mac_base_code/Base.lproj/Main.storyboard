@@ -759,15 +759,19 @@
                             <constraint firstAttribute="bottom" secondItem="MMF-GO-iQJ" secondAttribute="bottom" constant="20" symbolic="YES" id="oUI-d0-G9o"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="CollectionView" destination="6gE-8W-EJX" id="5Ec-bz-ifH"/>
+                        <segue destination="elS-fu-zPo" kind="show" identifier="WebSegue" id="Cd2-ul-4S6"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="1077"/>
         </scene>
-        <!--View Controller-->
+        <!--Webview Controller-->
         <scene sceneID="9gi-Vj-6a5">
             <objects>
-                <viewController id="elS-fu-zPo" sceneMemberID="viewController">
+                <viewController id="elS-fu-zPo" customClass="WebviewController" customModule="mac_base_code" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="03q-pu-z6K">
                         <rect key="frame" x="0.0" y="0.0" width="1280" height="640"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -775,7 +779,7 @@
                 </viewController>
                 <customObject id="6B4-5A-xes" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="1823"/>
+            <point key="canvasLocation" x="75" y="1831"/>
         </scene>
     </scenes>
     <resources>
