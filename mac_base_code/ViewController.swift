@@ -7,24 +7,37 @@
 
 import Cocoa
 
+// Change this name app
+public let AppName = "UKMPPD"
+
 class ViewController: NSViewController {
     
-    @IBOutlet weak var CollectionView: NSCollectionView!
-    private var AppName = [String]()
+    // Attribute
+    private var AppList = [String]()
     private var tmp: String!
+    
+    @IBOutlet weak var CollectionView: NSCollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         CollectionView.isSelectable = true
         
-        AppName = ["Ilmu Penyakit Dalam"]
+        AppList = ["Ilmu Penyakit Dalam"]
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        
+        // Set window Title
+        let NameKey = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
+        self.view.window?.title = "\(AppName) \(NameKey)"
     }
     
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
         for item in indexPaths {
             if let int = item.last {
-                self.tmp = String(AppName[int])
+                self.tmp = String(AppList[int])
             }
         }
         collectionView.deselectItems(at: indexPaths)
@@ -48,13 +61,13 @@ class ViewController: NSViewController {
 
 extension ViewController: NSCollectionViewDelegate, NSCollectionViewDataSource {
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return AppName.count
+        return AppList.count
     }
 
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         let item = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "AppItem"), for: indexPath)
         
-        item.imageView?.image = NSImage(named: String(AppName[indexPath.item]))
+        item.imageView?.image = NSImage(named: String(AppList[indexPath.item]))
         
         return item
     }

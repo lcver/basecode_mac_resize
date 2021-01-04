@@ -13,7 +13,6 @@
 		01B8892A25A1F23600166900 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B8892825A1F23600166900 /* Main.storyboard */; };
 		01B8893925A1F7AC00166900 /* AppItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B8893725A1F7AC00166900 /* AppItem.swift */; };
 		01B8893A25A1F7AC00166900 /* AppItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01B8893825A1F7AC00166900 /* AppItem.xib */; };
-		01B8893E25A2096400166900 /* Ilmu Penyakit Dalam in Resources */ = {isa = PBXBuildFile; fileRef = 01B8893D25A2096400166900 /* Ilmu Penyakit Dalam */; };
 		01B8894225A2196F00166900 /* WebviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B8894125A2196F00166900 /* WebviewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +26,6 @@
 		01B8892C25A1F23600166900 /* mac_base_code.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mac_base_code.entitlements; sourceTree = "<group>"; };
 		01B8893725A1F7AC00166900 /* AppItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppItem.swift; sourceTree = "<group>"; };
 		01B8893825A1F7AC00166900 /* AppItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppItem.xib; sourceTree = "<group>"; };
-		01B8893D25A2096400166900 /* Ilmu Penyakit Dalam */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Ilmu Penyakit Dalam"; sourceTree = "<group>"; };
 		01B8894125A2196F00166900 /* WebviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,7 +59,6 @@
 		01B8892125A1F23200166900 /* mac_base_code */ = {
 			isa = PBXGroup;
 			children = (
-				01B8893C25A2090D00166900 /* html */,
 				01B8892225A1F23200166900 /* AppDelegate.swift */,
 				01B8892425A1F23200166900 /* ViewController.swift */,
 				01B8892625A1F23600166900 /* Assets.xcassets */,
@@ -73,14 +70,6 @@
 				01B8894125A2196F00166900 /* WebviewController.swift */,
 			);
 			path = mac_base_code;
-			sourceTree = "<group>";
-		};
-		01B8893C25A2090D00166900 /* html */ = {
-			isa = PBXGroup;
-			children = (
-				01B8893D25A2096400166900 /* Ilmu Penyakit Dalam */,
-			);
-			path = html;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +131,6 @@
 			files = (
 				01B8892725A1F23600166900 /* Assets.xcassets in Resources */,
 				01B8893A25A1F7AC00166900 /* AppItem.xib in Resources */,
-				01B8893E25A2096400166900 /* Ilmu Penyakit Dalam in Resources */,
 				01B8892A25A1F23600166900 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
