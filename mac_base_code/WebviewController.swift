@@ -24,6 +24,7 @@ class WebviewController: NSViewController, NSWindowDelegate {
         // Delegating window self
         self.view.window?.delegate = self
         
+        self.view.window?.title = "[\(AppName)] - " + AppTemp
         
         if let screenWindow = self.view.window?.frame {
             let rect = screenWindow.size
